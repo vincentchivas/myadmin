@@ -1,0 +1,23 @@
+<!-- 
+ author:kunli
+ date:2011-03-30
+ email:kunli@bainainfo.com-->
+<uwsgi>
+    <socket>%(#provision-service-group.ip)s:%(#provision-service-group.http_port)s</socket>
+    <env>DJANGO_SETTINGS_MODULE=provision.settings</env>
+    <module>django.core.handlers.wsgi:WSGIHandler()</module>
+    <processes>8</processes>
+    <master/>
+    <master-as-root />
+    <enable-threads />
+    <!-- request timeout -->
+    <harakiri>10</harakiri>
+    <signal-bufsize>524288</signal-bufsize>
+    <buffer-size>32768</buffer-size>
+    <post-buffering>32768</post-buffering>
+    <daemonize>%(log_dir_base)s/provision-service/uwsgi.log</daemonize>
+    <listen>20000</listen>
+    <socket-timeout>4</socket-timeout>
+    <disable-logging />
+    <stats>127.0.0.1:18086</stats>
+</uwsgi>

@@ -1,0 +1,13 @@
+[provider-service]
+debug       = %(cfg_debug)s
+db_conn_str = %(cfg_db_conn_str)s
+logs_dir    = %(log_dir_base)s/provider-service
+host = %(url)s
+mysql_ip = %(mysql_ip_str)s
+auth_debug_value = %(auth_debug)s
+exception_debug_value = %(exception_debug)s
+get_xml_url = %(get_xml_url_str)s
+build_task_url = %(build_task_url_str)s
+get_tag_url = %(get_tag_url_str)s
+get_status_url = %(get_status_url_str)s
+#data_dir   = %(data_dir_base)s/provision-service

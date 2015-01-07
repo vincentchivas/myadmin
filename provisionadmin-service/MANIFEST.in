@@ -1,0 +1,6 @@
+global-include *.cfg *.xml *.jar
+graft scripts
+graft provisionadmin/templates
+graft provisionadmin/static
+graft provisionadmin/web/templates
+graft provisionadmin/locale

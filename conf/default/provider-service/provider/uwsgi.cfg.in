@@ -1,0 +1,16 @@
+[uwsgi]
+processes = 4
+stats = 127.0.0.1:18088
+socket = %(#provider-service-group.ip)s:%(#provider-service-group.http_port)s
+max-requests = 1000000
+log-slow = true
+module = wsgi
+enable-threads = true
+reload-on-as = 128
+harakiri = 300 
+daemonize = %(log_dir_base)s/provider-service/uwsgi.log
+master = true
+# pidfile = %(log_dir_base)s/provider-service/uwsgi.pid
+listen = 1000
+env = DJANGO_SETTINGS_MODULE=provider.settings
+module = django.core.handlers.wsgi:WSGIHandler()

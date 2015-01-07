@@ -1,0 +1,21 @@
+[provisionadmin-service]
+debug       = %(cfg_debug)s
+db_conn_str = %(cfg_db_conn_str)s
+logs_dir    = %(log_dir_base)s/provisionadmin-service
+host = %(url)s
+auth_debug_value = %(auth_debug)s
+exception_debug_value = %(exception_debug)s
+admin_production = %(admin_production_conf)s
+db_conn_local = %(cfg_db_conn_local)s
+db_conn_china = %(cfg_db_conn_china)s
+db_conn_ec2 = %(cfg_db_conn_ec2)s
+web_env_ec2 = %(web_env_ec2_conf)s
+web_env_china = %(web_env_china_conf)s
+web_env_local = %(web_env_local_conf)s
+domain_env_ec2 = %(domain_env_ec2_conf)s
+domain_env_china = %(domain_env_china_conf)s
+domain_env_local = %(domain_env_local_conf)s
+s3_env_local = %(s3_env_local_conf)s
+s3_env_china = %(s3_env_china_conf)s
+s3_env_ec2 = %(s3_env_ec2_conf)s
+#data_dir   = %(data_dir_base)s/provision-service

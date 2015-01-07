@@ -1,0 +1,7 @@
+global-include *.cfg *.xml *.jar
+graft scripts
+graft dolphinop/templates
+graft dolphinop/ipranges
+graft dolphinop/static
+graft dolphinop/web/templates
+graft dolphinop/locale

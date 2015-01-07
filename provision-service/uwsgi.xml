@@ -1,0 +1,14 @@
+<!-- 
+ author: chzhong
+ date: 2011-06-18
+ email: chzhong@bainainfo.com-->
+<uwsgi>
+    <socket>:8000</socket> 
+    <env>DJANGO_SETTINGS_MODULE=provision.settings</env>
+    <module>django.core.handlers.wsgi:WSGIHandler()</module>
+    <processes>4</processes>
+    <master/>
+    <!-- request timeout -->
+    <harakiri>60</harakiri>
+    <daemonize>/var/app/log/provision-service/uwsgi.log</daemonize>
+</uwsgi>

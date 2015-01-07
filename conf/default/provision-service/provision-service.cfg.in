@@ -1,0 +1,17 @@
+[provision-service]
+debug           = %(cfg_debug)s
+dolphinop_db    = %(db_ip)s:27017/dolphinop
+mongodb_conf =  mongodb://%(db_ip)s:27017
+logs_dir        = %(log_dir_base)s/provision-service
+data_dir        = %(data_dir_base)s/provision-service
+static_root     = /var/app/enabled/provision-service
+request_timeout = 1.0
+max_retry       = 3
+http_max_age    = 86400
+backend_timeout = 5
+max_ip_count    = 10
+max_sim_count   = 4
+default_language = %(language)s
+domain          =  %(url)s
+compress        = %(web_compress)s
+server          = %(server_conf)s
